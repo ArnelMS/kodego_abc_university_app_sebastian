@@ -6,8 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMain"
+        android:layout_width="384dp"
+        android:layout_height="456dp"
+        android:layout_marginTop="180dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imgActivityBg"
         android:layout_width="494dp"
         android:layout_height="904dp"
         android:background="#FFFFFF"
@@ -18,4 +28,70 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.173"
         app:srcCompat="@drawable/bg_homeactivity" />
+
+    <FrameLayout
+        android:id="@+id/fragmentMain"
+        android:layout_width="411dp"
+        android:layout_height="477dp"
+        app:layout_constraintBottom_toTopOf="@+id/tabLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.955">
+
+    </FrameLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="409dp"
+        android:layout_height="51dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewMain">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/homeicon"
+            android:text="Home" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:icon="@drawable/announcmenticon"
+            android:scrollbarSize="3dp"
+            android:text="NEWS"
+            tools:layout_editor_absoluteX="83dp"
+            tools:layout_editor_absoluteY="662dp" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabAssignment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/assignment"
+            android:text="assignment"
+            tools:layout_editor_absoluteX="165dp"
+            tools:layout_editor_absoluteY="678dp" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/notepencilicon4"
+            android:text="NOTES" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabSyllabus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/syllabusicon"
+            android:text="Syllabus" />
+    </com.google.android.material.tabs.TabLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
